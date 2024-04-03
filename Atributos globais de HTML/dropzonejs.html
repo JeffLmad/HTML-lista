@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo do atributo global dropzone com JS</title>
+    <style>
+        .caixa{
+            width: 100px;
+            height: 100px;
+            background-color: sandybrown;
+        }
+        .drop{
+            width: 200px;
+            height: 200px;
+            border:crimson 1px solid;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div id="c1" class="caixa" draggable="true"></div>
+    <div id="c2" class="caixa" draggable="true"></div>
+
+
+<!-- A tag dropzone aceita alguns valores como COPY para copiar o elemento desejado, ou o valor move para mover o elemento desejado porem é preciso verificar se o navegador aceita esse segundo valor ou se será necessario o uso de js -->
+    <div class="drop" dropzone="copy"></div>
+
+
+<!-- Só para mostrar na pratica a movimentação do teste -->
+
+<script>
+
+const caixas = document.querySelectorAll('.caixa');
+const dropZone = document.querySelector('[dropzone]');
+
+caixas.forEach(caixaE1 =>{
+
+    caixaE1.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('Text', e.target.id);
+        console.log(e.target.id);
+    });
+
+});
+
+dropZone.addEventListener('dragover' , e =>{
+
+    e.preventDefault();
+
+});
+
+
+dropZone.addEventListener('drop', e => {
+    const id = e.dataTransfer.getData('Text');
+    const element = document.getElementById(id);
+
+    e.target.appendChild(element)
+});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

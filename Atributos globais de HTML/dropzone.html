@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo do atributo global dropzone</title>
+    <style>
+        .caixa{
+            width: 100px;
+            height: 100px;
+            background-color: sandybrown;
+        }
+        .drop{
+            width: 200px;
+            height: 200px;
+            border:crimson 1px solid;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div class="caixa" draggable="true"></div>
+
+
+<!-- A tag dropzone aceita alguns valores como COPY para copiar o elemento desejado, ou o valor move para mover o elemento desejado porem é preciso verificar se o navegador aceita esse segundo valor ou se será necessario o uso de js -->
+    <div class="drop" dropzone="copy"></div>
+
+    
+</body>
+</html>
