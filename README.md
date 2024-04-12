@@ -1,6 +1,4 @@
 <h1>Projeto para listar elementos HTML</h1>
-
-<h2>Visão do projeto:</h2>
 <ul>
   <li>Treinar conhecimentos em HTML</li>
   <li>Fixar conceitos da linguagem</li>
