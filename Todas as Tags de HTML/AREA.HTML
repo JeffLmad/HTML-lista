@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag area</title>
+</head>
+<body>
+    <!-- usada para definir areas clicaveis em um mapa de imagem.
+    esta tag deve ser sempre filha de uma tag map-->
+
+     <!-- Atributos especificos:
+    alt: define um texto alternativo para a imagem.
+coords: define a coordenada da area. a ordem depende do atributo shape.
+download: usada para forçar o download do destino do link.
+href: define qual endereço do link de destino.
+hreflang: define qual a linguagem do link de destino.
+media: define qual a midia ou despositivo do link de destino.
+rel : define qual a relação do documento atual e o de destino.
+shape: define uma dorma para a area. default, rect,circle,poly
+target: define onde o link devera ser aberto. -blank,-parent,-self,-top,-nome de um frame.
+type: define o tipo de midia do link de destino. --> 
+
+
+<img src="site-foto-apresentacao.png" alt="img" usemap="#mapa-logo">
+
+
+<map name="mapa-logo" >
+    <area shape="circle" coords="211,263,15" href="www.facebook.com" alt="imagem banda">
+
+    <area shape="rect" coords="0,0,20,20" href="www.instagram.com.br" alt="instagram banda">
+
+
+    <area shape="circle" coords="301,263,15" href="www.youtube.com.br" alt="imagem banda">
+
+    <area shape="poly" coords="500,250,20" href="www.youtube.com.br" alt="imagem banda">
+</map>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
